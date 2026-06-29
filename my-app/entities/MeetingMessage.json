@@ -1,0 +1,38 @@
+{
+  "name": "MeetingMessage",
+  "type": "object",
+  "properties": {
+    "meeting_id": {
+      "type": "string",
+      "description": "Reference to the meeting"
+    },
+    "sender_name": {
+      "type": "string"
+    },
+    "sender_id": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "text",
+        "file",
+        "system"
+      ],
+      "default": "text"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "meeting_id",
+    "content"
+  ]
+}

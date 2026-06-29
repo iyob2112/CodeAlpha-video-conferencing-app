@@ -1,0 +1,43 @@
+{
+  "name": "WhiteboardStroke",
+  "type": "object",
+  "properties": {
+    "meeting_id": {
+      "type": "string"
+    },
+    "stroke_data": {
+      "type": "string",
+      "description": "JSON stringified stroke path data"
+    },
+    "color": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "width": {
+      "type": "number",
+      "default": 2
+    },
+    "tool": {
+      "type": "string",
+      "enum": [
+        "pen",
+        "eraser",
+        "rectangle",
+        "circle",
+        "line",
+        "text"
+      ],
+      "default": "pen"
+    },
+    "author_id": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "meeting_id",
+    "stroke_data"
+  ]
+}

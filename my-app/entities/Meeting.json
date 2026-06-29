@@ -1,0 +1,48 @@
+{
+  "name": "Meeting",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Meeting title"
+    },
+    "room_code": {
+      "type": "string",
+      "description": "Unique room code for joining"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "scheduled",
+        "active",
+        "ended"
+      ],
+      "default": "scheduled"
+    },
+    "scheduled_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "host_name": {
+      "type": "string"
+    },
+    "host_id": {
+      "type": "string"
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "max_participants": {
+      "type": "number",
+      "default": 10
+    }
+  },
+  "required": [
+    "title",
+    "room_code"
+  ]
+}

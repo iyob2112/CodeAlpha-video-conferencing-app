@@ -1,0 +1,29 @@
+{
+  "name": "SharedFile",
+  "type": "object",
+  "properties": {
+    "meeting_id": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "file_size": {
+      "type": "number"
+    },
+    "uploaded_by": {
+      "type": "string"
+    },
+    "uploaded_by_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "meeting_id",
+    "file_name",
+    "file_url"
+  ]
+}
